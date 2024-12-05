@@ -36,8 +36,6 @@ export const actions = {
     const respJson = await response.json();
     const errorMessage = respJson.message.join("\n");
 
-    console.log("FUCKED")
-
     return fail(400, { code: response.status, message: errorMessage });
   },
   deleteUser: async ({ request }) => {
